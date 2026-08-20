@@ -3,15 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { NavBar } from "./components/NavBar";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { JoinOurNetwork } from "./pages/JoinOurNetwork";
-import OurStory from "./pages/ourStory";
-import { GetInTouch } from "./pages/GetInTouch";
-import Services from "./pages/services";
-import { Community } from "./pages/Community";
 import { Footer } from "./components/Footer";
-
 import { Prospect } from "./pages/Prospect";
-
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -19,12 +12,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<JoinOurNetwork />} />
-        <Route path="/our-story" element={<OurStory />} />
-        <Route path="/get-in-touch" element={<GetInTouch />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/services" element={<Services />} />
-
+        <Route path="/" element={<Prospect />} />
         <Route path="/prospect" element={<Prospect />} />
       </Routes>
     </AnimatePresence>
