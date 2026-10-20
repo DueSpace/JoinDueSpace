@@ -9,60 +9,103 @@ export const ExperienceGap = () => {
   const challenges = [
     {
       image: ExperienceFinished,
+      text: (
+        <>
+          You finished
+          <br />
+          the course.
+        </>
+      ),
     },
     {
       image: ExperienceTutorial,
+      text: (
+        <>
+          You built tutorial
+          <br />
+          projects.
+        </>
+      ),
     },
     {
       image: ExperienceJobs,
+      text: (
+        <>
+          You apply for jobs.
+        </>
+      ),
     },
     {
       image: ExperienceWorks,
+      text: (
+        <>
+          Every employer
+          <br />
+          asks for experience
+        </>
+      ),
     },
     {
       image: DueSpaceSymbol,
+      text: (
+        <>
+          <strong>DueSpace</strong>
+        </>
+      ),
     },
   ];
 
   return (
-    <section className="w-full bg-[#fdf6ff] px-6 py-8">
+    <section className="w-full bg-[#fdf6ff] px-5 py-8 sm:px-8 lg:px-[18px] lg:py-9">
+
       {/* Section label */}
-      <div className="mb-4 inline-flex rounded-full border border-purple-500 px-4 py-2">
-        <span className="text-[9px] font-medium tracking-[0.14em] text-purple-600">
+      <div className="mb-4 inline-flex rounded-[15px] border border-purple-500 px-5 py-3">
+        <span className="font-mono text-[13px] tracking-[0.08em] text-purple-600">
           THE CHALLENGE
         </span>
       </div>
 
       {/* Heading */}
-      <h2 className="mb-5 text-[20px] font-semibold leading-tight text-black">
+      <h2 className="mb-7 text-[22px] font-semibold leading-tight text-black sm:text-[23px] lg:text-[23px]">
         The Experience Gap
       </h2>
 
       {/* Timeline */}
       <div className="relative">
 
-        {/* Dotted vertical line */}
-        <div className="absolute left-[17px] top-[18px] bottom-[43px] border-l border-dashed border-purple-300" />
+        {/* Mobile vertical dashed line */}
+        <div className="absolute left-[28px] top-[28px] bottom-[28px] border-l border-dashed border-purple-300 lg:hidden" />
 
-        {/* Challenge items */}
-        <div className="flex flex-col gap-5">
+        {/* Desktop horizontal dashed line */}
+        <div className="absolute left-[7%] right-[7%] top-[34px] hidden border-t border-dashed border-purple-300 lg:block" />
+
+        {/* Timeline items */}
+        <div className="flex flex-col gap-6 lg:grid lg:grid-cols-5 lg:gap-0">
+
           {challenges.map((challenge, index) => (
             <div
               key={index}
-              className="relative flex items-center gap-4"
+              className="relative flex items-center gap-4 lg:flex-col lg:items-center lg:gap-0"
             >
-              {/* Same image box for all five images */}
-              <div className="relative z-10 flex h-[34px] w-[250px] items-center">
+
+              {/* Icon */}
+              <div className="relative z-10 flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-full bg-white lg:h-[68px] lg:w-[68px]">
                 <img
                   src={challenge.image}
                   alt=""
-                  className="h-full w-full object-contain object-left"
+                  className="h-full w-full object-contain"
                 />
               </div>
+
+              {/* Text */}
+              <p className="text-[14px] leading-5 text-gray-800 lg:mt-5 lg:text-center lg:text-[14px]">
+                {challenge.text}
+              </p>
+
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );
