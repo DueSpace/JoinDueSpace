@@ -1,6 +1,5 @@
-import React from "react";
 import ProjectImage from "../assets/DuespaceProject.png";
-import DueSpaceLogo from "../assets/Duespace.png";
+import DueSpaceLogo from "../assets/DueSpace.png";
 
 import Member1 from "../assets/community/Desire.png";
 import Member2 from "../assets/community/Precious.png";
