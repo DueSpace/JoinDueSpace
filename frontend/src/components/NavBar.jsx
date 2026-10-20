@@ -50,15 +50,7 @@ export const NavBar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
-<<<<<<< Updated upstream
-  const navLinks = [
-    { name: "Join Our Network", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Get in Touch", path: "/get-in-touch" },
-    { name: "Community", path: "/community" },
-    { name: "Our Story", path: "/our-story" },
-  ];
-=======
+
   // Reusable navigation link
   const renderNavLink = (link, mobile = false, index = 0) => {
     const isActive =
@@ -106,7 +98,7 @@ export const NavBar = () => {
       </motion.li>
     );
   };
->>>>>>> Stashed changes
+
 
   return (
     <>
