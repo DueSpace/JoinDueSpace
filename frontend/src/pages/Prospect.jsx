@@ -9,7 +9,8 @@ import { OurNetwork } from "../components/OurNetwork";
 
 export const Prospect = () => {
   return (
-    <main>
+    <main className="w-full">
+
       <ProspectHero />
       <ExperienceGap />
       <WhatYouGain />
@@ -17,6 +18,7 @@ export const Prospect = () => {
       <WhoThisIsFor />
       <RealProjects />
       <OurNetwork />
+
     </main>
   );
 };
